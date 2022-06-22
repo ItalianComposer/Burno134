@@ -4,11 +4,375 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
   <title>Рousing in Thailand</title>
 </head>
 <body>
+  <header class="header">
+    <div class="header__menu">
+      <img src="img\icons\logo.svg" alt="">
+      <div class="menu__mobile_menu">
+        <div class="mobile_menu__controls">
+          <a class="controls_button" href="#">Покупка</a>
+          <a class="controls_button" href="#">Аренда</a>
+          <a class="controls_button" href="#">Горячие предложения</a>
+          <a class="controls_button" href="#">Путеводитель</a>
+          <a class="controls_button" href="#">Контакты</a>
+          <a class="controls_button" href="#">Инвестирование</a>
+        </div>
+        <div class="mobile_menu__phone">
+          <img class="" src="img\icons\phone.svg" alt="">
+        </div>
+        <div class="mobile_menu__button">
+          <p class="mobile_menu__button__text">Меню</p>
+          <p class="mobile_menu__button__text_dots">...</p>
+        </div>
+        <div class="mobile_menu__optional_buttons">
+          <select class="optional_buttons__lang" name="">
+            <option value="Ru">Ru</option>
+            <option value="En">En</option>
+            <option value="Ua">Ua</option>
+          </select>
+          <select class="optional_buttons__cur" name="">
+            <option value="$">$</option>
+            <option value="₽">₽</option>
+            <option value="€">€</option>
+            <option value="£">£</option>
+          </select>
+          <div class="optional_buttons__soc">
+            <img src="img/icons/fb.svg" alt="">
+            <img src="img/icons/vk.svg" alt="">
+            <img src="img/icons/inst.svg" alt="">
+          </div>
+          <div class="optional_buttons__call">
+            <a class="optional_buttons__phone" href="#">+7 999 220 20 20</a>
+            <p class="mobile_menu__button__text_dots">...</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="header__head">
+      <p class="head__title">Недвижимость <br>в Таиланде для вас </p>
+      <p class="head__description">Лучшие предложения по аренде и продаже вилл, аппартаментов и кондоминиумов в Паттайе, Пхукете и Самуи.</p>
+    </div>
+    <div class="header__filter">
+      <div class="filter_buttons">
+        <button class="filter_buttons__button" type="button" name="button">По виду</button>
+        <button class="filter_buttons__button" type="button" name="button">По имени или ID</button>
+        <button class="filter_buttons__button" type="button" name="button">По расположению</button>
+      </div>
+      <div class="filter__inputs">
+        <select class="inputs__select top">
+          <option class="select__option">Арендовать</option>
+          <option class="select__option">Купить</option>
+        </select>
+        <select class="inputs__select middle">
+          <option>Тип объекта</option>
+          <option>Квартира</option>
+          <option>Дом</option>
+        </select>
+        <select class="inputs__select bottom">
+          <option>40 тыс.-200 тыс.$</option>
+          <option>200 тыс. - 300 тыс.$</option>
+        </select>
+        <div class="inputs__search">
+          <img class="search" src="img/icons/searchBlack.svg" alt="">
+          <button class="search_button" type="button" name="button">Подобрать объекты</button>
+        </div>
+      </div>
+       <button class="filter__button" type="button" name="button">Подобрать объекты</button>
+       <div class="filter__advanced_button">
+         <a class="filter__advanced_button__inner" href="#">Расширенный поиск</a>
+         <img class="advanced_button__search_icon" src="img\icons\search.svg" alt="">
+       </div>
+    </div>
+  </header>
+  <div class="hot_offers">
+    <div class="hot_offers_header">
+      <div class="hot_offers_header__title">
+        <p>Горячие предложения</p>
+        <div class="hot_offers_header__switchers">
+          <button class="switchers_button" type="button" name="button">Аренда</button>
+          <button class="switchers_button" type="button" name="button">Продажа</button>
+          <button class="switchers_button" type="button" name="button">Инвестиции</button>
+        </div>
+      </div>
+      <div class="hot_offers_header__description">
+        <p>Мы отбираем лучшие предложения на рынке недвижимости и формируем индивидуальные выгодные предложения</p>
+      </div>
+    </div>
+    <div class="hot_offers__gallery">
+      <ul class="gallery">
+        <li>
+          <img class="gallery_img" src="img/preview/1.png" alt="">
+          <div class="gallery_img_description">
+            <div class="gallery_img_description__title">
+              <p class="title__tag">Продажа</p>
+              <p class="title__tag">Аренда</p>
+            </div>
+            <div class="gallery_img_description__pricing">
+              <p class="pricing__rooms">3 комн. аппартаменты</p>
+              <p class="pricing__price">3 000 000 $</p>
+            </div>
+            <div class="gallery_img_description__geoposition">
+              <img src="img/icons/geopos.svg" alt="">
+              <p class="geoposition__sity">Мабпрахан, Таиланд</p>
+              <img src="img/icons/romb.svg" alt="">
+              <p class="geoposition__area">124(96) м2</p>
+            </div>
+          </div>
+          </img>
+        </li>
+        <li>
+          <img class="gallery_img" src="img/preview/3.png" alt="">
+          <div class="gallery_img_description">
+            <div class="gallery_img_description__title">
+              <p class="title__tag">Продажа</p>
+              <p class="title__tag">Аренда</p>
+            </div>
+            <div class="gallery_img_description__pricing">
+              <p class="pricing__rooms">3 комн. аппартаменты</p>
+              <p class="pricing__price">3 000 000 $</p>
+            </div>
+            <div class="gallery_img_description__geoposition">
+              <img src="img/icons/geopos.svg" alt="">
+              <p class="geoposition__sity">Мабпрахан, Таиланд</p>
+              <img src="img/icons/romb.svg" alt="">
+              <p class="geoposition__area">124(96) м2</p>
+            </div>
+          </div>
+          </img>
+        </li>
+        <li>
+          <img class="gallery_img" src="img/preview/4.png" alt="">
+          <div class="gallery_img_description">
+            <div class="gallery_img_description__title">
+              <p class="title__tag">Продажа</p>
+              <p class="title__tag">Аренда</p>
+            </div>
+            <div class="gallery_img_description__pricing">
+              <p class="pricing__rooms">3 комн. аппартаменты</p>
+              <p class="pricing__price">3 000 000 $</p>
+            </div>
+            <div class="gallery_img_description__geoposition">
+              <img src="img/icons/geopos.svg" alt="">
+              <p class="geoposition__sity">Мабпрахан, Таиланд</p>
+              <img src="img/icons/romb.svg" alt="">
+              <p class="geoposition__area">124(96) м2</p>
+            </div>
+          </div>
+          </img>
+        </li>
+        <li>
+          <img class="gallery_img" src="img/preview/4.png" alt="">
+          <div class="gallery_img_description">
+            <div class="gallery_img_description__title">
+              <p class="title__tag">Продажа</p>
+              <p class="title__tag">Аренда</p>
+            </div>
+            <div class="gallery_img_description__pricing">
+              <p class="pricing__rooms">3 комн. аппартаменты</p>
+              <p class="pricing__price">3 000 000 $</p>
+            </div>
+            <div class="gallery_img_description__geoposition">
+              <img src="img/icons/geopos.svg" alt="">
+              <p class="geoposition__sity">Мабпрахан, Таиланд</p>
+              <img src="img/icons/romb.svg" alt="">
+              <p class="geoposition__area">124(96) м2</p>
+            </div>
+          </div>
+          </img>
+        </li>
+        <li>
+          <img class="gallery_img" src="img/preview/3.png" alt="">
+          <div class="gallery_img_description">
+            <div class="gallery_img_description__title">
+              <p class="title__tag">Продажа</p>
+              <p class="title__tag">Аренда</p>
+            </div>
+            <div class="gallery_img_description__pricing">
+              <p class="pricing__rooms">3 комн. аппартаменты</p>
+              <p class="pricing__price">3 000 000 $</p>
+            </div>
+            <div class="gallery_img_description__geoposition">
+              <img src="img/icons/geopos.svg" alt="">
+              <p class="geoposition__sity">Мабпрахан, Таиланд</p>
+              <img src="img/icons/romb.svg" alt="">
+              <p class="geoposition__area">124(96) м2</p>
+            </div>
+          </div>
+          </img>
+        </li>
+        <li>
+          <img class="gallery_img" src="img/preview/1.png" alt="">
+          <div class="gallery_img_description">
+            <div class="gallery_img_description__title">
+              <p class="title__tag">Продажа</p>
+              <p class="title__tag">Аренда</p>
+            </div>
+            <div class="gallery_img_description__pricing">
+              <p class="pricing__rooms">3 комн. аппартаменты</p>
+              <p class="pricing__price">3 000 000 $</p>
+            </div>
+            <div class="gallery_img_description__geoposition">
+              <img src="img/icons/geopos.svg" alt="">
+              <p class="geoposition__sity">Мабпрахан, Таиланд</p>
+              <img src="img/icons/romb.svg" alt="">
+              <p class="geoposition__area">124(96) м2</p>
+            </div>
+          </div>
+          </img>
+        </li>
+      </ul>
 
+    </div>
+      <button class="hot_offers__view_all" type="button" name="button">Посмотреть все</button>
+  </div>
+  <div class="promotions">
+    <p class="promotions__title">Уникальные подборки акции и обзоры <button class="promotions__view_all_tablet" type="button" name="button">Посмотреть все</button></p>
+      <div class="promotions__slider">
+        <ul class="promotions_gallery">
+          <li>
+            <img class="promotions_gallery_img" src="img/preview/unic1.png" alt="">
+              <div class="promotions_gallery_img__description">
+                <p class="description_compilation">Подборка объектов</p>
+                <p class="description_top">Топ-10 вилл в крутых районах Тайланда</p>
+              </div>
+            </img>
+          </li>
+          <li>
+            <img class="promotions_gallery_img" src="img/preview/unic2.png" alt="">
+              <div class="promotions_gallery_img__description">
+                <p class="description_compilation">Обзор проекта</p>
+                <p class="description_top">Уникальные квартиры в Jomtien House Tripple Squad Apportunity</p>
+              </div>
+            </img>
+          </li>
+          <li>
+            <img class="promotions_gallery_img" src="img/preview/unic3.png" alt="">
+              <div class="promotions_gallery_img__description">
+                <p class="description_compilation">Наши рекомендации</p>
+                <p class="description_top">Виллы от застройщика</p>
+              </div>
+            </img>
+          </li>
+          <li>
+            <img class="promotions_gallery_img" src="img/preview/unic4.png" alt="">
+              <div class="promotions_gallery_img__description">
+                <p class="description_compilation">Подборка объектов</p>
+                <p class="description_top">Топ-10 вилл в крутых районах Тайланда</p>
+              </div>
+            </img>
+          </li>
+        </ul>
+      </div>
+      <button class="promotions__view_all" type="button" name="button">Посмотреть все</button>
+      <div class="promotions__form">
+        <p class="promotions__form_title">Оставьте почту и получайте новые предложения первым. Без спама.</p>
+        <div class="promotions__form_form">
+          <input class="promotions__form_input" type="email" name="" value="" placeholder="Ваша почта">
+          <button class="promotions__form_button" type="button" name="button">Отправить</button>
+        </div>
+        <p class="promotions__form_ps">Нажимая кнопку «отправить», вы принимаете пользовательское соглашение на обработку персональных данных</p>
+      </div>
+  </div>
+  <div class="benefits">
+    <p class="benefits__title">Преимущества Таиланда</p>
+    <div class="benefits_slider">
+      <ul class="benefits_gallery">
+        <li>
+          <div class="card">
+            <img src="img/icons/palm.svg" alt="">
+            <p class="card__title">Теплый климат</p>
+            <p class="card__description">Постоянное лето с температурой не ниже 20°С, которое невозможно найти в Испании или финансово более приемлемой Болгарии.</p>
+          </div>
+        </li>
+        <li>
+          <div class="card">
+            <img src="img/icons/bat.svg" alt="">
+            <p class="card__title">Приятные цены</p>
+            <p class="card__description">Необходимо меньше финансов. Продукты питания стоят недорого. Фрукты и морепродукты можно употреблять в течение всего года.</p>
+          </div>
+        </li>
+        <li>
+          <div class="card">
+            <img src="img/icons/rice.svg" alt="">
+            <p class="card__title">Местная кухня</p>
+            <p class="card__description">Тайская кухня сочетает в себе экзотические и непривычные смешения разных вкусов и гото</p>
+          </div>
+        </li>
+        <li>
+          <div class="card">
+            <img src="img/icons/house.svg" alt="">
+            <p class="card__title">Интересные места</p>
+            <p class="card__description">Парки и сады, уникальная архитектура, античные скульптуры, дворцы и многое другое</p>
+          </div>
+        </li>
+        <li>
+          <div class="card">
+            <img src="img/icons/hands.svg" alt="">
+            <p class="card__title">Гостеприимство</p>
+            <p class="card__description">Доброе и дружественно относящееся ко всем местное население, готовое одаривать всех улыбками. О лучших соседях и мечтать не стоит.</p>
+          </div>
+        </li>
+        <li>
+          <div class="card">
+            <img src="img/icons/pineapple.svg" alt="">
+            <p class="card__title">Свежие фрукты</p>
+            <p class="card__description">Таиланд находится в такой природно-климатической зоне, где свежайшие фрукты доступны в круглогодичном режиме.</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="faq">
+
+    <div class="faq__spoilers">
+      <p class="faq__title">Частые вопросы</p>
+      <div class="spoilers__spoiler">
+        <p id="tool" class="hider spoiler__title">Что такое дорожные (тревел) чеки?</p>
+        <div class="" id="hidden" style="display: none;">
+          <p class="spoiler__content">Это удобное средство для перевозки денежных средств, как для простых путешественников, так и для людей, собирающихся приобретать недвижимость в Таиланде. Подробнее о преимуществе дорожных чеков в Таиланде, как средства ввоза валюты читайте в нашей статье.</p>
+        </div>
+      </div>
+      <div class="spoilers__spoiler">
+        <p id="tool1" class="hider1 spoiler__title">Можно ли оплатить покупку наличной валютой?</p>
+        <div class="" id="hidden1" style="display: none;">
+          <p class="spoiler__content">Это удобное средство для перевозки денежных средств, как для простых путешественников, так и для людей, собирающихся приобретать недвижимость в Таиланде. Подробнее о преимуществе дорожных чеков в Таиланде, как средства ввоза валюты читайте в нашей статье.</p>
+        </div>
+      </div>
+      <div class="spoilers__spoiler">
+        <p id="tool2" class="hider2 spoiler__title">Процедура покупки кондоминиума на вторичном рынке в Тайланде</p>
+        <div class="" id="hidden2" style="display: none;">
+          <p class="spoiler__content">Это удобное средство для перевозки денежных средств, как для простых путешественников, так и для людей, собирающихся приобретать недвижимость в Таиланде. Подробнее о преимуществе дорожных чеков в Таиланде, как средства ввоза валюты читайте в нашей статье.</p>
+        </div>
+      </div>
+    </div>
+    <div class="faq_form">
+      <p class="faq_form__title">Не нашли нужный вопрос? Ответим лично!</p>
+      <p class="faq_form__description">Наши специалисты ответят вам в течении пары дней</p>
+      <input class="faq_form__input" type="text" name="" value="" placeholder="Ваш телефон">
+      <input class="faq_form__input faq_form__input__message" type="text" name="" value="" placeholder="Ваш вопрос">
+      <div class="faq_form__submit">
+        <button class="submit__button" type="button" name="button">Отправить</button>
+        <p class="submit__ps">Нажимая кнопку «отправить», вы принимаете пользовательское соглашение на обработку персональных данных</p>
+      </div>
+    </div>
+  </div>
+  <footer class="footer">
+    <div class="footer__feedback">
+      <img class="footer_img_womanbg" src="img/bg/womanbg.png" alt="">
+      <img class="footer_img_woman" src="img/bg/woman.png" alt="">
+      <p class="footer__title">Хотите в отпуск, но трудно выбрать недвижимость по вкусу?</p>
+      <p class="footer__description">Мы бесплатно консультируем на нескольких языках и готовы оперативно ответить на любые вопросы, просто попросите перезвонить</p>
+      <div class="footer__form">
+        <input class="footer__input" type="email" name="" value="" placeholder="Ваш телефон">
+        <button class="footer__form_button promotions__form_button" type="button" name="button">Отправить</button>
+      </div>
+      <p class="footer__ps">Нажимая кнопку «отправить», вы принимаете пользовательское соглашение на обработку персональных данных</p>         
+    </div>
+  </footer>
 <script type="text/javascript" src="scripts/main.js"></script>
 </body>
 </html>

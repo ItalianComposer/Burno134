@@ -1,25 +1,22 @@
-$font-mulish: 'Mulish', sans-serif;
-$text-main-color: #FFF;
-
 .faq {
   background: #2B2B2B;
-  padding: 60px 20px 60px 20px;
-}
+  padding: 60px 20px 60px 20px; }
+
 .spoilers__spoiler {
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-}
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1); }
+
 .faq__title {
-  font: 100% $font-mulish;
-  color: $text-main-color;
+  font: 100% "Mulish", sans-serif;
+  color: #FFF;
   font-weight: 500;
   font-size: 24px;
   line-height: 28px;
   text-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
-  margin-bottom: 4px;
-}
+  margin-bottom: 4px; }
+
 .spoiler__title {
-  font: 100% $font-mulish;
-  color: $text-main-color;
+  font: 100% "Mulish", sans-serif;
+  color: #FFF;
   font-weight: 700;
   font-size: 16px;
   line-height: 20px;
@@ -27,38 +24,38 @@ $text-main-color: #FFF;
   justify-content: space-between;
   cursor: pointer;
   margin-bottom: 16px;
-  margin-top: 16px;
-}
+  margin-top: 16px; }
+
 .spoiler__title:hover {
-  color: #FFC345;
-}
+  color: #FFC345; }
+
 .spoiler__content {
-  font: 100% $font-mulish;
-  color: $text-main-color;
+  font: 100% "Mulish", sans-serif;
+  color: #FFF;
   font-weight: 400;
   font-size: 14px;
   line-height: 20px;
   margin-top: 12px;
-  margin-bottom: 16px;
-}
+  margin-bottom: 16px; }
+
 .tool {
   color: #FCB216;
-  text-shadow: 0px 0px 25px rgba(255, 147, 68, 0.2);
-}
+  text-shadow: 0px 0px 25px rgba(255, 147, 68, 0.2); }
+
 #tool:after,
 #tool1:after,
-#tool2:after,  {
+#tool2:after {
   content: "...";
   color: #2B2B2B;
-  background: url(F:/Portfolio/Burno134/img/icons/open.svg) no-repeat;
-}
+  background: url(F:/Portfolio/Burno134/img/icons/open.svg) no-repeat; }
+
 #tool.tool:after,
 #tool1.tool:after,
 #tool2.tool:after {
   content: "...";
   color: #2B2B2B;
-  background: url(F:/Portfolio/Burno134/img/icons/close.svg) no-repeat;
-}
+  background: url(F:/Portfolio/Burno134/img/icons/close.svg) no-repeat; }
+
 /*
 #tool:after {
   content: "...";
@@ -99,29 +96,29 @@ $text-main-color: #FFF;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  padding: 24px 30px 40px 30px;
-}
+  padding: 24px 30px 40px 30px; }
+
 .faq_form__title {
-  font: 100% $font-mulish;
-  color: $text-main-color;
+  font: 100% "Mulish", sans-serif;
+  color: #FFF;
   font-weight: 500;
   font-size: 24px;
   line-height: 28px;
-  width: 294px;
-}
+  width: 294px; }
+
 .faq_form__description {
-  font: 100% $font-mulish;
-  color: $text-main-color;
+  font: 100% "Mulish", sans-serif;
+  color: #FFF;
   font-weight: 400;
   font-size: 16px;
   line-height: 20px;
   opacity: 0.8;
   width: 292px;
-  margin: 12px 0 20px 0;
-}
+  margin: 12px 0 20px 0; }
+
 .faq_form__input {
-  font: 100% $font-mulish;
-  color: rgba(0, 0, 0, 0.2);;
+  font: 100% "Mulish", sans-serif;
+  color: rgba(0, 0, 0, 0.2);
   width: 376px;
   height: 56px;
   background: #FFFFFF;
@@ -131,18 +128,18 @@ $text-main-color: #FFF;
   line-height: 24px;
   padding: 0;
   padding-left: 24px;
-  border: none;
-}
+  border: none; }
+
 .faq_form__input__message {
   height: 96px;
   margin: 12px 0 20px 0;
   display: flex;
-  align-items: flex-start;
-}
+  align-items: flex-start; }
+
 .faq_form__submit {
   display: flex;
-  align-items: center;
-}
+  align-items: center; }
+
 .submit__button {
   width: 160px;
   height: 48px;
@@ -152,21 +149,22 @@ $text-main-color: #FFF;
   display: flex;
   align-items: center;
   justify-content: center;
-  font: 100% $font-mulish;
+  font: 100% "Mulish", sans-serif;
   color: #000000;
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
-  margin-right: 12px;
-}
+  margin-right: 12px; }
+
 .submit__ps {
-  font: 100% $font-mulish;
-  color: $text-main-color;
+  font: 100% "Mulish", sans-serif;
+  color: #FFF;
   font-weight: 400;
   font-size: 8px;
   line-height: 10px;
   opacity: 0.2;
   width: 180px;
   height: 30px;
-  text-align: left;
-}
+  text-align: left; }
+
+/*# sourceMappingURL=faq.css.map */
