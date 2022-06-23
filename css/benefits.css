@@ -28,7 +28,10 @@
   height: 210px;
   scroll-snap-type: both mandatory;
   scroll-padding: 1rem;
-  margin: 0; }
+  margin: 0;
+  scrollbar-width: none; }
+.benefits_slider .benefits_gallery::-webkit-scrollbar {
+  width: 0; }
 .benefits_slider .active {
   scroll-snap-type: unset; }
 .benefits_slider li {

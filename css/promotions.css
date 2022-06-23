@@ -36,7 +36,7 @@
 
 .promotions__form {
   box-sizing: border-box;
-  width: 320px;
+  width: 100vw;
   height: 260px;
   background: #353535;
   border: 2px solid #353535;
@@ -55,20 +55,24 @@
   font-size: 16px;
   line-height: 20px;
   text-align: center;
-  margin-top: 24px; }
+  margin-top: 24px;
+  width: 87.5vw; }
 
 .promotions__slider .promotions_gallery {
   padding-left: 20px;
   display: grid;
   grid-template-columns: repeat(10, 230px);
   grid-template-rows: 1fr;
-  grid-column-gap: 1rem;
+  grid-column-gap: 0px;
   grid-row-gap: 1rem;
   overflow: scroll;
   height: 342px;
   scroll-snap-type: both mandatory;
   scroll-padding: 1rem;
-  margin: 0; }
+  margin: 0;
+  scrollbar-width: none; }
+.promotions__slider .promotions_gallery::-webkit-scrollbar {
+  width: 0; }
 .promotions__slider .active {
   scroll-snap-type: unset; }
 .promotions__slider li {

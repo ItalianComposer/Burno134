@@ -30,7 +30,8 @@ header {
   align-items: center;
   justify-content: center;
   background: rgba(0, 0, 0, 0.1);
-  border-radius: 4px; }
+  border-radius: 4px;
+  z-index: 10; }
 
 .mobile_menu__button__text {
   font: 100% "Mulish", sans-serif;
@@ -74,7 +75,7 @@ header {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 280px; }
+  width: 87.5vw; }
 
 .filter_buttons {
   display: flex;
@@ -127,7 +128,17 @@ header {
   color: rgba(0, 0, 0, 0.75);
   font-weight: 400;
   font-size: 16px;
-  line-height: 24px; }
+  line-height: 24px;
+  appearance: none;
+  outline: none; }
+  .inputs__select option {
+    color: #000; }
+
+.top, .middle:not([multiple]) {
+  background-repeat: no-repeat;
+  background-position: calc(100% - 1em) 1.35em;
+  background-size: 0.85em auto;
+  background-image: url(../img/icons/arrow2.svg); }
 
 .select__option {
   width: 280px; }
@@ -248,6 +259,61 @@ header {
   font-size: 12px;
   line-height: 16px; }
 
+#navigation__toggle {
+  opacity: 0;
+  position: absolute; }
+
+#navigation__toggle:checked ~ .navigation__box {
+  left: 0 !important; }
+
+.navigation__btn {
+  top: 20px;
+  left: 240px;
+  width: 26px;
+  height: 26px;
+  cursor: pointer;
+  z-index: 1; }
+
+.navigation__btn > span,
+.navigation__btn > span::before,
+.navigation__btn > span::after {
+  display: block;
+  transition-duration: .25s; }
+
+.navigation__box {
+  display: block;
+  position: fixed;
+  top: 55px;
+  left: 100%;
+  width: 100vw;
+  height: 100%;
+  margin: 0;
+  padding: 80px 0;
+  list-style: none;
+  background-color: rgba(0, 0, 0, 0.7);
+  transition-duration: .25s;
+  z-index: 1; }
+  .navigation__box li {
+    height: 55px; }
+
+.box__item {
+  display: block;
+  padding: 12px 24px;
+  font: 100% "Mulish", sans-serif;
+  color: #FFFFFF;
+  font-size: 20px;
+  font-weight: 500;
+  text-decoration: none;
+  transition-duration: .25s; }
+
+.controls_button {
+  text-decoration: none;
+  font: 100% "Mulish", sans-serif;
+  color: #FFFFFF;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px; }
+
 .benefits {
   background: #2B2B2B;
   padding-top: 72px; }
@@ -278,7 +344,10 @@ header {
   height: 210px;
   scroll-snap-type: both mandatory;
   scroll-padding: 1rem;
-  margin: 0; }
+  margin: 0;
+  scrollbar-width: none; }
+.benefits_slider .benefits_gallery::-webkit-scrollbar {
+  width: 0; }
 .benefits_slider .active {
   scroll-snap-type: unset; }
 .benefits_slider li {
@@ -492,7 +561,8 @@ html, body {
 footer {
   padding-bottom: 80px;
   background: #2B2B2B;
-  background-position: 396px 5px; }
+  background-position: 396px 5px;
+  overflow: hidden; }
 
 .footer__title {
   font: 100% "Mulish", sans-serif;
@@ -528,8 +598,7 @@ footer {
 .footer__form {
   display: flex;
   flex-direction: column;
-  /*  background: url(../img/bg/womanbg.png) no-repeat;
-    background-position: -94px 35px; */ }
+  align-items: center; }
 
 .footer__ps {
   font: 100% "Mulish", sans-serif;
@@ -545,8 +614,10 @@ footer {
   position: absolute;
   top: 2420px;
   left: 490px;
+  width: 278px;
+  height: 460px;
   object-fit: cover;
-  height: 460px; }
+  object-position: -2px 0px; }
 
 .footer_img_womanbg {
   position: absolute;
@@ -556,6 +627,9 @@ footer {
 .footer__feedback {
   background: #FFFFFF;
   padding: 24px 20px 40px 20px; }
+
+.footer_img_womanbg_desktop {
+  display: none; }
 
 .hot_offers {
   background: #2B2B2B; }
@@ -612,15 +686,19 @@ footer {
 .gallery {
   padding: 0;
   display: grid;
-  grid-template-columns: repeat(10, 80vw);
+  grid-template-columns: repeat(10, 272px);
   grid-template-rows: 1fr;
-  grid-column-gap: 1rem;
-  grid-row-gap: 1rem;
+  grid-column-gap: 0px;
+  grid-row-gap: 16px;
   overflow: scroll;
   height: 180px;
   scroll-snap-type: both mandatory;
   scroll-padding: 1rem;
-  margin: 0; }
+  margin: 0;
+  scrollbar-width: none; }
+
+.gallery::-webkit-scrollbar {
+  width: 0; }
 
 .active {
   scroll-snap-type: unset; }
@@ -741,7 +819,7 @@ li {
 
 .promotions__form {
   box-sizing: border-box;
-  width: 320px;
+  width: 100vw;
   height: 260px;
   background: #353535;
   border: 2px solid #353535;
@@ -760,20 +838,24 @@ li {
   font-size: 16px;
   line-height: 20px;
   text-align: center;
-  margin-top: 24px; }
+  margin-top: 24px;
+  width: 87.5vw; }
 
 .promotions__slider .promotions_gallery {
   padding-left: 20px;
   display: grid;
   grid-template-columns: repeat(10, 230px);
   grid-template-rows: 1fr;
-  grid-column-gap: 1rem;
+  grid-column-gap: 0px;
   grid-row-gap: 1rem;
   overflow: scroll;
   height: 342px;
   scroll-snap-type: both mandatory;
   scroll-padding: 1rem;
-  margin: 0; }
+  margin: 0;
+  scrollbar-width: none; }
+.promotions__slider .promotions_gallery::-webkit-scrollbar {
+  width: 0; }
 .promotions__slider .active {
   scroll-snap-type: unset; }
 .promotions__slider li {
@@ -859,7 +941,13 @@ li {
 
 @media (max-width: 320px) {
   .promotions .promotions__view_all_tablet {
-    display: none; } }
+    display: none; }
+
+  .bottom:not([multiple]) {
+    background-repeat: no-repeat;
+    background-position: calc(100% - 1em) 1.35em;
+    background-size: 0.85em auto;
+    background-image: url(../img/icons/arrow2.svg); } }
 @media (max-width: 767px) {
   .mobile_menu__optional_buttons {
     display: none; }
@@ -908,6 +996,11 @@ li {
     width: 100%;
     justify-content: space-between; }
 
+  .navigation__box {
+    display: flex;
+    flex-direction: column;
+    width: 100vw; }
+
   .filter__button {
     display: none; }
 
@@ -924,7 +1017,7 @@ li {
   .top {
     border-radius: 8px 0px 0px 8px; }
 
-  .bot {
+  .bottom {
     border-radius: 0px 8px 8px 0px; }
 
   .filter__inputs {
@@ -1115,13 +1208,38 @@ li {
       border: none;
       margin-bottom: 0; }
     .footer__form .footer__form_button {
-      margin-right: 4px; }
+      margin-right: 4px;
+      z-index: 2; }
 
   .filter_buttons {
     display: none; }
 
   .search_button {
     display: none; } }
+@media (min-width: 820px) {
+  .footer_img_woman {
+    left: 542px; }
+
+  .footer_img_womanbg {
+    left: 448px; } }
+@media (min-width: 912px) {
+  .footer_img_woman {
+    left: 634px; }
+
+  .footer_img_womanbg {
+    left: 540px; }
+
+  .promotions__form {
+    margin-left: 175px; } }
+@media (min-width: 1024px) {
+  .footer_img_woman {
+    left: 746px; }
+
+  .footer_img_womanbg {
+    left: 652px; }
+
+  .promotions__form {
+    margin-left: 240px; } }
 @media (max-width: 1199px) {
   .mobile_menu__controls {
     display: none; }
@@ -1131,6 +1249,9 @@ li {
 @media (min-width: 1200px) {
   .mobile_menu__button {
     display: none; }
+
+  .filter_buttons {
+    display: block; }
 
   .head__title {
     max-width: 600px;
@@ -1173,9 +1294,9 @@ li {
 
   .gallery {
     padding-left: 100px;
-    grid-template-columns: repeat(3, 25vw);
+    grid-template-columns: repeat(3, 26vw);
     grid-template-rows: 200px;
-    height: 434px; }
+    height: 452px; }
 
   .hot_offers__view_all {
     margin-left: 40vw; }
@@ -1225,7 +1346,7 @@ li {
     height: 506px; }
     .benefits_slider .benefits_gallery {
       grid-template-columns: repeat(3, 315px);
-      height: 430px;
+      height: 450px;
       justify-content: center;
       align-items: center; }
 
@@ -1249,24 +1370,51 @@ li {
 
   footer {
     /* background: #2B2B2B; */
-    padding: 0px 100px 0px 100px;
+    padding: 0px 100px 78px 100px;
     display: flex;
     flex-direction: column;
     align-items: flex-start; }
 
   .footer__feedback {
-    width: 960px;
-    border-radius: 20px;
-    border: 2px solid #FCB216;
-    border-radius: 30px; }
+    padding: 40px 40px 40px 56px;
+    width: 900px;
+    border-radius: 20px; }
 
   .footer_img_womanbg {
-    top: 3080px;
-    left: 810px; }
+    display: none; }
+
+  .footer_img_womanbg_desktop {
+    display: block;
+    position: absolute;
+    top: 3065px;
+    left: 485px;
+    z-index: 1; }
 
   .footer_img_woman {
-    top: 3030px;
-    left: 810px; } }
+    top: 3000px;
+    left: 675px;
+    z-index: 2;
+    height: 500px;
+    width: auto; }
+
+  .feedback__border {
+    opacity: 0.5;
+    border: 2px solid #FCB216;
+    border-radius: 30px;
+    width: 980px;
+    height: 392px; } }
+@media (min-width: 1280px) {
+  .footer_img_woman {
+    left: 746px; }
+
+  .footer_img_womanbg {
+    left: 652px; }
+
+  .promotions__form {
+    margin-left: 90px; }
+
+  .promotions__form_ps {
+    top: 1805px; } }
 html, body, p {
   margin: 0;
   padding: 0; }

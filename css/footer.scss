@@ -7,6 +7,7 @@ footer {
   padding-bottom: 80px;
   background: #2B2B2B /* url(../img/bg/womanbg.png) no-repeat*/ ;
   background-position: 396px 5px;
+  overflow: hidden;
 }
 .footer__title {
   font: 100% $font-mulish;
@@ -42,8 +43,7 @@ footer {
 .footer__form {
   display: flex;
   flex-direction: column;
-/*  background: url(../img/bg/womanbg.png) no-repeat;
-  background-position: -94px 35px; */
+  align-items: center;
 }
 .footer__ps {
   font: 100% $font-mulish;
@@ -59,8 +59,10 @@ footer {
   position: absolute;
   top: 2420px;
   left: 490px;
-  object-fit: cover;
+  width: 278px;
   height: 460px;
+  object-fit: cover;
+  object-position: -2px 0px;
 }
 .footer_img_womanbg {
   position: absolute;
@@ -70,4 +72,7 @@ footer {
 .footer__feedback {
   background: #FFFFFF;
   padding: 24px 20px 40px 20px;
+}
+.footer_img_womanbg_desktop {
+  display: none;
 }

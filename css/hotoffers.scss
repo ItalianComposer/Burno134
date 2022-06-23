@@ -59,16 +59,18 @@ $text-main-color: #FFF;
 .gallery {
 	padding: 0;
 	display: grid;
-	grid-template-columns: repeat(10, 80vw);
+	grid-template-columns: repeat(10, 272px);
 	grid-template-rows: 1fr;
-	grid-column-gap: 1rem;
-	grid-row-gap: 1rem;
+	grid-column-gap: 0px;
+	grid-row-gap: 16px;
 	overflow: scroll;
 	height: 180px;
 	scroll-snap-type: both mandatory;
 	scroll-padding: 1rem;
   margin: 0;
+  scrollbar-width: none;
 }
+.gallery::-webkit-scrollbar { width: 0; }
 .active {
 	scroll-snap-type: unset;
 }

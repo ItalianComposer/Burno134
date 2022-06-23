@@ -34,7 +34,9 @@ $text-main-color: #FFF;
   	scroll-snap-type: both mandatory;
   	scroll-padding: 1rem;
     margin: 0;
+    scrollbar-width: none;
   }
+  .benefits_gallery::-webkit-scrollbar { width: 0; }
   .active {
   	scroll-snap-type: unset;
   }
